@@ -5,29 +5,77 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
-    android:gravity="center">
+    android:padding="28dp"
+    android:gravity="center"
+    android:background="#2E7D32">
 
-    <!-- Message personnalise 7asb el verdict -->
-    <TextView
-        android:id="@+id/tv_verdict_message_fk"
+    <!-- Carte centrale mta3 el certificat de verdict -->
+    <LinearLayout
+        android:id="@+id/layout_carte_verdict_fk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Verdict"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="#FFFFFF"
+        android:orientation="vertical"
+        android:background="@drawable/bg_passeport"
+        android:padding="24dp"
         android:gravity="center"
-        android:layout_marginBottom="32dp" />
+        android:layout_marginBottom="28dp">
+
+        <!-- 3onwen rasmi mta3 el douane -->
+        <TextView
+            android:id="@+id/tv_titre_verdict_fk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DOUANE TEMPORELLE"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:textColor="#5C6BC0"
+            android:gravity="center"
+            android:layout_marginBottom="6dp" />
+
+        <!-- Badge mta3 el statut (Autorise walla Arrestation) -->
+        <TextView
+            android:id="@+id/tv_statut_verdict_fk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DECISION OFFICIELLE"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#1A237E"
+            android:gravity="center"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Kkhat fassel -->
+        <View
+            android:id="@+id/view_separateur_verdict_fk"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#C5CAE9"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Message personnalise 7asb el verdict (Bon voyage [Nom] walla Arrestation) -->
+        <TextView
+            android:id="@+id/tv_verdict_message_fk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Bon voyage Fakhri"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:gravity="center"
+            android:layout_marginBottom="8dp" />
+
+    </LinearLayout>
 
     <!-- Bouton bech narj3ou lel MainActivity m3a mosafar jdid -->
     <Button
         android:id="@+id/btn_nouveau_voyageur_fk"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="54dp"
         android:text="Nouveau voyageur"
-        android:backgroundTint="#FFFFFF"
-        android:textColor="#212121"
+        android:backgroundTint="#1A237E"
+        android:textColor="#FFFFFF"
+        android:textSize="16sp"
         android:textStyle="bold" />
 
 </LinearLayout>
