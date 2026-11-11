@@ -6,53 +6,76 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:weightSum="1.0"
-    android:padding="16dp"
+    android:padding="20dp"
     android:gravity="center_vertical"
-    android:background="#FFF8E1">
+    android:background="#E8EAF6">
 
-    <!-- A gauche : Image b poids 0.3 (photo mta3 el passeport temporel) -->
+    <!-- A gauche : Image b poids 0.3 (photo officielle mta3 el passeport temporel) -->
     <ImageView
         android:id="@+id/iv_photo_passeport_fk"
         android:layout_width="0dp"
-        android:layout_height="180dp"
+        android:layout_height="220dp"
         android:layout_weight="0.3"
         android:src="@mipmap/ic_launcher_round"
         android:scaleType="centerInside"
-        android:background="#E0E0E0"
-        android:padding="8dp"
+        android:background="@drawable/bg_photo_passeport"
+        android:padding="12dp"
         android:contentDescription="Photo du voyageur" />
 
-    <!-- A droite : RelativeLayout b poids 0.7 fih les textes w les boutons -->
+    <!-- A droite : RelativeLayout b poids 0.7 fih les textes mta3 el passeport w les boutons -->
     <RelativeLayout
         android:id="@+id/rl_details_passeport_fk"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_weight="0.7"
-        android:paddingStart="16dp"
-        android:paddingEnd="8dp">
+        android:layout_marginStart="12dp"
+        android:background="@drawable/bg_passeport"
+        android:padding="16dp">
+
+        <!-- Sous-titre officiel mta3 el douane -->
+        <TextView
+            android:id="@+id/tv_sous_titre_passeport_fk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RÉPUBLIQUE TEMPORELLE • VISA"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:textColor="#5C6BC0" />
 
         <!-- 3onwen el passeport / billet -->
         <TextView
             android:id="@+id/tv_titre_passeport_fk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/tv_sous_titre_passeport_fk"
             android:text="PASSEPORT TEMPOREL"
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="#1A237E"
-            android:layout_marginBottom="16dp" />
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="10dp" />
+
+        <!-- Kkhat fassel bin el 3onwen w les donnees -->
+        <View
+            android:id="@+id/view_separateur_passeport_fk"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_below="@id/tv_titre_passeport_fk"
+            android:background="#C5CAE9"
+            android:layout_marginBottom="14dp" />
 
         <!-- Esm el mosafar -->
         <TextView
             android:id="@+id/tv_nom_voyageur_fk"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/tv_titre_passeport_fk"
-            android:text="Nom : "
+            android:layout_below="@id/view_separateur_passeport_fk"
+            android:text="Nom : Fakhri"
             android:textSize="16sp"
             android:textStyle="bold"
-            android:textColor="#212121"
-            android:layout_marginBottom="8dp" />
+            android:textColor="#1A237E"
+            android:layout_marginBottom="10dp" />
 
         <!-- El age temporel el ma7soub -->
         <TextView
@@ -60,10 +83,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_nom_voyageur_fk"
-            android:text="Âge temporel : "
-            android:textSize="16sp"
-            android:textColor="#212121"
-            android:layout_marginBottom="8dp" />
+            android:text="Âge temporel : 60 ans"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#37474F"
+            android:layout_marginBottom="10dp" />
 
         <!-- Motif mta3 el safar -->
         <TextView
@@ -71,10 +95,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@id/tv_age_temporel_fk"
-            android:text="Motif : "
-            android:textSize="16sp"
-            android:textColor="#212121"
-            android:layout_marginBottom="24dp" />
+            android:text="Motif : Tourisme"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            android:textColor="#37474F"
+            android:layout_marginBottom="20dp" />
 
         <!-- Bouton bech nwef9ou 3al saut temporel -->
         <Button
@@ -85,7 +110,8 @@
             android:text="Approuver le saut temporel"
             android:backgroundTint="#2E7D32"
             android:textColor="#FFFFFF"
-            android:layout_marginBottom="12dp" />
+            android:textStyle="bold"
+            android:layout_marginBottom="8dp" />
 
         <!-- Bouton bech narfdhou (risque de paradoxe) -->
         <Button
@@ -95,7 +121,8 @@
             android:layout_below="@id/btn_approuver_fk"
             android:text="Refuser (Risque de paradoxe)"
             android:backgroundTint="#C62828"
-            android:textColor="#FFFFFF" />
+            android:textColor="#FFFFFF"
+            android:textStyle="bold" />
 
     </RelativeLayout>
 
