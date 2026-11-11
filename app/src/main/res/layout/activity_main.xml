@@ -1,115 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Layout mta3 el Activite 1 : Formulaire d'enregistrement -->
+<!-- Layout mta3 el Activite 1 : Formulaire d'enregistrement b design uniforme -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layout_main_fk"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
-    android:gravity="center_vertical"
-    android:background="#F5F7FA">
+    android:padding="20dp"
+    android:gravity="center"
+    android:background="#E8EAF6">
 
-    <!-- 3onwen el formulaire -->
-    <TextView
-        android:id="@+id/tv_titre_main_fk"
+    <!-- Carte principale mta3 el formulaire (nafs el cadre bg_passeport kima les autres activites) -->
+    <LinearLayout
+        android:id="@+id/layout_carte_formulaire_fk"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="DOUANE TEMPORELLE"
-        android:textSize="24sp"
-        android:textStyle="bold"
-        android:textColor="#1A237E"
-        android:gravity="center"
-        android:layout_marginBottom="24dp" />
+        android:orientation="vertical"
+        android:background="@drawable/bg_passeport"
+        android:padding="20dp">
 
-    <!-- Champ mta3 esm el mosafar -->
-    <TextView
-        android:id="@+id/tv_label_nom_fk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Nom du voyageur :"
-        android:textStyle="bold" />
+        <!-- Sous-titre officiel uniforme -->
+        <TextView
+            android:id="@+id/tv_sous_titre_main_fk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="RÉPUBLIQUE TEMPORELLE • CONTRÔLE"
+            android:textSize="11sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:textColor="#5C6BC0"
+            android:gravity="center" />
 
-    <EditText
-        android:id="@+id/et_nom_fk"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ex: Fakhri"
-        android:inputType="textPersonName"
-        android:layout_marginBottom="16dp" />
+        <!-- 3onwen el formulaire -->
+        <TextView
+            android:id="@+id/tv_titre_main_fk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="DOUANE TEMPORELLE"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="#1A237E"
+            android:gravity="center"
+            android:layout_marginTop="2dp"
+            android:layout_marginBottom="10dp" />
 
-    <!-- Champ mta3 3am el wileda -->
-    <TextView
-        android:id="@+id/tv_label_naissance_fk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Année de naissance :"
-        android:textStyle="bold" />
+        <!-- Kkhat fassel uniforme -->
+        <View
+            android:id="@+id/view_separateur_main_fk"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#C5CAE9"
+            android:layout_marginBottom="16dp" />
 
-    <EditText
-        android:id="@+id/et_annee_naissance_fk"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ex: 1990"
-        android:inputType="number"
-        android:layout_marginBottom="16dp" />
-
-    <!-- Champ mta3 3am el wousoul (destination) -->
-    <TextView
-        android:id="@+id/tv_label_destination_fk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Année de destination :"
-        android:textStyle="bold" />
-
-    <EditText
-        android:id="@+id/et_annee_destination_fk"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Ex: 2050"
-        android:inputType="number"
-        android:layout_marginBottom="16dp" />
-
-    <!-- Ikhtiyar sabab el safar (Motif de voyage b les boutons radio) -->
-    <TextView
-        android:id="@+id/tv_label_motif_fk"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Motif du voyage :"
-        android:textStyle="bold" />
-
-    <RadioGroup
-        android:id="@+id/rg_motif_fk"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="24dp">
-
-        <RadioButton
-            android:id="@+id/rb_tourisme_fk"
+        <!-- Champ mta3 esm el mosafar -->
+        <TextView
+            android:id="@+id/tv_label_nom_fk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Tourisme"
-            android:checked="true" />
+            android:text="Nom du voyageur :"
+            android:textColor="#1A237E"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
 
-        <RadioButton
-            android:id="@+id/rb_modification_fk"
+        <EditText
+            android:id="@+id/et_nom_fk"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_champ_saisie"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:hint="Ex: Fakhri"
+            android:inputType="textPersonName"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Champ mta3 3am el wileda -->
+        <TextView
+            android:id="@+id/tv_label_naissance_fk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Modification du passé" />
+            android:text="Année de naissance :"
+            android:textColor="#1A237E"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
 
-        <RadioButton
-            android:id="@+id/rb_fuite_fk"
+        <EditText
+            android:id="@+id/et_annee_naissance_fk"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_champ_saisie"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:hint="Ex: 1990"
+            android:inputType="number"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Champ mta3 3am el wousoul (destination) -->
+        <TextView
+            android:id="@+id/tv_label_destination_fk"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fuite" />
-    </RadioGroup>
+            android:text="Année de destination :"
+            android:textColor="#1A237E"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
 
-    <!-- Bouton bech n3addiw les donnees lel Activite 2 -->
-    <Button
-        android:id="@+id/btn_inspecter_fk"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Inspecter le profil"
-        android:backgroundTint="#1A237E"
-        android:textColor="#FFFFFF" />
+        <EditText
+            android:id="@+id/et_annee_destination_fk"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="@drawable/bg_champ_saisie"
+            android:paddingStart="12dp"
+            android:paddingEnd="12dp"
+            android:hint="Ex: 2050"
+            android:inputType="number"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Ikhtiyar sabab el safar (Motif de voyage b les boutons radio) -->
+        <TextView
+            android:id="@+id/tv_label_motif_fk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Motif du voyage :"
+            android:textColor="#1A237E"
+            android:textStyle="bold"
+            android:layout_marginBottom="4dp" />
+
+        <RadioGroup
+            android:id="@+id/rg_motif_fk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <RadioButton
+                android:id="@+id/rb_tourisme_fk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tourisme"
+                android:textColor="#37474F"
+                android:checked="true" />
+
+            <RadioButton
+                android:id="@+id/rb_modification_fk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Modification du passé"
+                android:textColor="#37474F" />
+
+            <RadioButton
+                android:id="@+id/rb_fuite_fk"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fuite"
+                android:textColor="#37474F" />
+        </RadioGroup>
+
+        <!-- Bouton bech n3addiw les donnees lel Activite 2 -->
+        <Button
+            android:id="@+id/btn_inspecter_fk"
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            android:text="Inspecter le profil"
+            android:backgroundTint="#1A237E"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
 
 </LinearLayout>
