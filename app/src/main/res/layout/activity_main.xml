@@ -1,19 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+<!-- Layout mta3 el Activite 1 : Formulaire d'enregistrement -->
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_main_fk"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_vertical"
+    android:background="#F5F7FA">
 
+    <!-- 3onwen el formulaire -->
     <TextView
+        android:id="@+id/tv_titre_main_fk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DOUANE TEMPORELLE"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#1A237E"
+        android:gravity="center"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Champ mta3 esm el mosafar -->
+    <TextView
+        android:id="@+id/tv_label_nom_fk"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Nom du voyageur :"
+        android:textStyle="bold" />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <EditText
+        android:id="@+id/et_nom_fk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ex: Fakhri"
+        android:inputType="textPersonName"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Champ mta3 3am el wileda -->
+    <TextView
+        android:id="@+id/tv_label_naissance_fk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Année de naissance :"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_annee_naissance_fk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ex: 1990"
+        android:inputType="number"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Champ mta3 3am el wousoul (destination) -->
+    <TextView
+        android:id="@+id/tv_label_destination_fk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Année de destination :"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/et_annee_destination_fk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ex: 2050"
+        android:inputType="number"
+        android:layout_marginBottom="16dp" />
+
+    <!-- Ikhtiyar sabab el safar (Motif de voyage b les boutons radio) -->
+    <TextView
+        android:id="@+id/tv_label_motif_fk"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Motif du voyage :"
+        android:textStyle="bold" />
+
+    <RadioGroup
+        android:id="@+id/rg_motif_fk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp">
+
+        <RadioButton
+            android:id="@+id/rb_tourisme_fk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tourisme"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/rb_modification_fk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Modification du passé" />
+
+        <RadioButton
+            android:id="@+id/rb_fuite_fk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fuite" />
+    </RadioGroup>
+
+    <!-- Bouton bech n3addiw les donnees lel Activite 2 -->
+    <Button
+        android:id="@+id/btn_inspecter_fk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Inspecter le profil"
+        android:backgroundTint="#1A237E"
+        android:textColor="#FFFFFF" />
+
+</LinearLayout>
