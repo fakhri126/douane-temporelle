@@ -1,7 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Layout mta3 el Activite 3 : Le Verdict (ResultActivity) -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layout_result_fk"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center">
+
+    <!-- Message personnalise 7asb el verdict -->
+    <TextView
+        android:id="@+id/tv_verdict_message_fk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Verdict"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:gravity="center"
+        android:layout_marginBottom="32dp" />
+
+    <!-- Bouton bech narj3ou lel MainActivity m3a mosafar jdid -->
+    <Button
+        android:id="@+id/btn_nouveau_voyageur_fk"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Nouveau voyageur"
+        android:backgroundTint="#FFFFFF"
+        android:textColor="#212121"
+        android:textStyle="bold" />
+
 </LinearLayout>

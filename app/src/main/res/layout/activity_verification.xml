@@ -1,7 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- Layout mta3 el Activite 2 : LinearLayout horizontal racine kima matloub f el contrainte -->
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/layout_verification_fk"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="horizontal">
+    android:orientation="horizontal"
+    android:weightSum="1.0"
+    android:padding="16dp"
+    android:gravity="center_vertical"
+    android:background="#FFF8E1">
+
+    <!-- A gauche : Image b poids 0.3 (photo mta3 el passeport temporel) -->
+    <ImageView
+        android:id="@+id/iv_photo_passeport_fk"
+        android:layout_width="0dp"
+        android:layout_height="180dp"
+        android:layout_weight="0.3"
+        android:src="@mipmap/ic_launcher_round"
+        android:scaleType="centerInside"
+        android:background="#E0E0E0"
+        android:padding="8dp"
+        android:contentDescription="Photo du voyageur" />
+
+    <!-- A droite : RelativeLayout b poids 0.7 fih les textes w les boutons -->
+    <RelativeLayout
+        android:id="@+id/rl_details_passeport_fk"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.7"
+        android:paddingStart="16dp"
+        android:paddingEnd="8dp">
+
+        <!-- 3onwen el passeport / billet -->
+        <TextView
+            android:id="@+id/tv_titre_passeport_fk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="PASSEPORT TEMPOREL"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="#1A237E"
+            android:layout_marginBottom="16dp" />
+
+        <!-- Esm el mosafar -->
+        <TextView
+            android:id="@+id/tv_nom_voyageur_fk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_titre_passeport_fk"
+            android:text="Nom : "
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="#212121"
+            android:layout_marginBottom="8dp" />
+
+        <!-- El age temporel el ma7soub -->
+        <TextView
+            android:id="@+id/tv_age_temporel_fk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_nom_voyageur_fk"
+            android:text="Âge temporel : "
+            android:textSize="16sp"
+            android:textColor="#212121"
+            android:layout_marginBottom="8dp" />
+
+        <!-- Motif mta3 el safar -->
+        <TextView
+            android:id="@+id/tv_motif_voyage_fk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_age_temporel_fk"
+            android:text="Motif : "
+            android:textSize="16sp"
+            android:textColor="#212121"
+            android:layout_marginBottom="24dp" />
+
+        <!-- Bouton bech nwef9ou 3al saut temporel -->
+        <Button
+            android:id="@+id/btn_approuver_fk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_motif_voyage_fk"
+            android:text="Approuver le saut temporel"
+            android:backgroundTint="#2E7D32"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Bouton bech narfdhou (risque de paradoxe) -->
+        <Button
+            android:id="@+id/btn_refuser_fk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/btn_approuver_fk"
+            android:text="Refuser (Risque de paradoxe)"
+            android:backgroundTint="#C62828"
+            android:textColor="#FFFFFF" />
+
+    </RelativeLayout>
+
 </LinearLayout>
